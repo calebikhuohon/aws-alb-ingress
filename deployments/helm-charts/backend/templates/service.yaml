@@ -1,0 +1,17 @@
+{{ $svcPort := .Values.service.port -}}
+{{ $gqlPort := .Values.service.gqlport -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "service_template.fullname" . }}
+  labels:
+    {{- include "service_template.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  ports:
+    - port: {{ $svcPort }}
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "service_template.selectorLabels" . | nindent 4 }}
