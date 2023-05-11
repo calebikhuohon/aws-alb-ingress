@@ -1,4 +1,4 @@
-# Demo Setup
+# Setup
 
 This demo uses Kubernetes as its compute option, and Terraform as the infrastructure as code tool of choice.
 
