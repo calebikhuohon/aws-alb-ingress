@@ -16,6 +16,12 @@ The scripts include:
 * `deploy-app.sh` which deploys the application to kubernetes and handles ingress creation.
 
 ### Steps
+
+#### GitHub Actions
+* Set your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in GitHub Secrets
+* Run the various workflows in the GitHub Actions tab
+
+#### Command Line Scripts
 * `provision-infra.sh`
   * Replace the `AWS_USER_ARN` and `AWS_ARN` which your AWS account's equivalent.
   * Optional: change the `AWS_REGION` and `CLUSTER_NAME` to preferred values.
